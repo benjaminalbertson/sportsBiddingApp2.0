@@ -4,20 +4,16 @@
         <br />
     </p>
     <p>
-        <asp:Label ID="Label3" runat="server" Text="Login"></asp:Label>
+        <asp:Login ID="Login1" runat="server" OnAuthenticate="Login1_Authenticate">
+        </asp:Login>
     </p>
     <p>
-    <asp:Label ID="Label1" runat="server" Text="Username"></asp:Label>
 &nbsp;&nbsp;
-        <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-    </p>
+        </p>
     <p>
-        <asp:Label ID="Label2" runat="server" Text="Password"></asp:Label>
-&nbsp;&nbsp; &nbsp;<asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
-    </p>
+&nbsp;&nbsp; &nbsp;</p>
     <p>
-          <asp:Button ID="Button1" runat="server" Text="Login" OnClick="Button1_Click" />
-    </p>
+          &nbsp;</p>
     <p>
     </p>
 </asp:Content>
