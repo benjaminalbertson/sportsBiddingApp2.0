@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="sportsDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Sports Table">
+    <Key>
+      <PropertyRef Name="Bid ID" />
+    </Key>
+    <Property Name="Bid ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Home" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Away" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="Bid Home" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="Bid Away" Type="decimal" Precision="6" Scale="2" />
+    <Property Name="H% win" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="A% win" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="Home Winner" Type="tinyint" />
+    <Property Name="Away Winner" Type="tinyint" />
+    <Property Name="User ID" Type="int" />
+    <Property Name="Match ID" Type="int" />
+  </EntityType>
+  <EntityType Name="User Admin Table">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+    <Property Name="Balance" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+    <Property Name="Admin Account" Type="tinyint" Nullable="false" />
+  </EntityType>
+  <EntityContainer Name="sportsDBModelStoreContainer">
+    <EntitySet Name="Sports Table" EntityType="Self.Sports Table" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="User Admin Table" EntityType="Self.User Admin Table" Schema="dbo" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

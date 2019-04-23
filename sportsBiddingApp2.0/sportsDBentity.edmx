@@ -1,0 +1,136 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="sportsDBModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2012" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="Sports Table">
+          <Key>
+            <PropertyRef Name="Bid ID" />
+          </Key>
+          <Property Name="Bid ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="Home" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Away" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="Bid Home" Type="decimal" Precision="6" Scale="2" />
+          <Property Name="Bid Away" Type="decimal" Precision="6" Scale="2" />
+          <Property Name="H% win" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="A% win" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Home Winner" Type="tinyint" />
+          <Property Name="Away Winner" Type="tinyint" />
+          <Property Name="User ID" Type="int" />
+          <Property Name="Match ID" Type="int" />
+        </EntityType>
+        <EntityType Name="User Admin Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="FirstName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
+          <Property Name="Balance" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Admin Account" Type="tinyint" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="sportsDBModelStoreContainer">
+          <EntitySet Name="Sports Table" EntityType="Self.Sports Table" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="User Admin Table" EntityType="Self.User Admin Table" Schema="dbo" store:Type="Tables" />
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="sportsDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="Sports_Table">
+          <Key>
+            <PropertyRef Name="Bid_ID" />
+          </Key>
+          <Property Name="Bid_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="Home" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Away" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="Bid_Home" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="Bid_Away" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="H__win" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="A__win" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Home_Winner" Type="Byte" />
+          <Property Name="Away_Winner" Type="Byte" />
+          <Property Name="User_ID" Type="Int32" />
+          <Property Name="Match_ID" Type="Int32" />
+        </EntityType>
+        <EntityType Name="User_Admin_Table">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
+          <Property Name="Balance" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Admin_Account" Type="Byte" Nullable="false" />
+        </EntityType>
+        <EntityContainer Name="sportsDBEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="Sports_Tables" EntityType="Self.Sports_Table" />
+          <EntitySet Name="User_Admin_Tables" EntityType="Self.User_Admin_Table" />
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="sportsDBModelStoreContainer" CdmEntityContainer="sportsDBEntities">
+          <EntitySetMapping Name="Sports_Tables">
+            <EntityTypeMapping TypeName="sportsDBModel.Sports_Table">
+              <MappingFragment StoreEntitySet="Sports Table">
+                <ScalarProperty Name="Bid_ID" ColumnName="Bid ID" />
+                <ScalarProperty Name="Home" ColumnName="Home" />
+                <ScalarProperty Name="Away" ColumnName="Away" />
+                <ScalarProperty Name="Bid_Home" ColumnName="Bid Home" />
+                <ScalarProperty Name="Bid_Away" ColumnName="Bid Away" />
+                <ScalarProperty Name="H__win" ColumnName="H% win" />
+                <ScalarProperty Name="A__win" ColumnName="A% win" />
+                <ScalarProperty Name="Home_Winner" ColumnName="Home Winner" />
+                <ScalarProperty Name="Away_Winner" ColumnName="Away Winner" />
+                <ScalarProperty Name="User_ID" ColumnName="User ID" />
+                <ScalarProperty Name="Match_ID" ColumnName="Match ID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="User_Admin_Tables">
+            <EntityTypeMapping TypeName="sportsDBModel.User_Admin_Table">
+              <MappingFragment StoreEntitySet="User Admin Table">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="username" ColumnName="username" />
+                <ScalarProperty Name="password" ColumnName="password" />
+                <ScalarProperty Name="Balance" ColumnName="Balance" />
+                <ScalarProperty Name="Admin_Account" ColumnName="Admin Account" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>

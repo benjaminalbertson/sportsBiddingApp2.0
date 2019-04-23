@@ -1,0 +1,35 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="sportsDBModelStoreContainer" CdmEntityContainer="sportsDBEntities">
+    <EntitySetMapping Name="Sports_Tables">
+      <EntityTypeMapping TypeName="sportsDBModel.Sports_Table">
+        <MappingFragment StoreEntitySet="Sports Table">
+          <ScalarProperty Name="Bid_ID" ColumnName="Bid ID" />
+          <ScalarProperty Name="Home" ColumnName="Home" />
+          <ScalarProperty Name="Away" ColumnName="Away" />
+          <ScalarProperty Name="Bid_Home" ColumnName="Bid Home" />
+          <ScalarProperty Name="Bid_Away" ColumnName="Bid Away" />
+          <ScalarProperty Name="H__win" ColumnName="H% win" />
+          <ScalarProperty Name="A__win" ColumnName="A% win" />
+          <ScalarProperty Name="Home_Winner" ColumnName="Home Winner" />
+          <ScalarProperty Name="Away_Winner" ColumnName="Away Winner" />
+          <ScalarProperty Name="User_ID" ColumnName="User ID" />
+          <ScalarProperty Name="Match_ID" ColumnName="Match ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="User_Admin_Tables">
+      <EntityTypeMapping TypeName="sportsDBModel.User_Admin_Table">
+        <MappingFragment StoreEntitySet="User Admin Table">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+          <ScalarProperty Name="LastName" ColumnName="LastName" />
+          <ScalarProperty Name="username" ColumnName="username" />
+          <ScalarProperty Name="password" ColumnName="password" />
+          <ScalarProperty Name="Balance" ColumnName="Balance" />
+          <ScalarProperty Name="Admin_Account" ColumnName="Admin Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>
