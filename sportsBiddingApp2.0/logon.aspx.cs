@@ -37,7 +37,15 @@ namespace sportsBiddingApp2._0
             Session.Add("name", myPerson.FirstName);
             Session.Add("balance", myPerson.Balance);
             FormsAuthentication.RedirectFromLoginPage(Login1.UserName, true);
-            Response.Redirect("~/Default.aspx");
+            if (myPerson.Admin_Account == 1)
+            {
+                Response.Redirect("~/Admin.aspx");
+            }
+            else
+            {
+                Response.Redirect("~/Default.aspx");
+            }
+            
         }
     }
 }
