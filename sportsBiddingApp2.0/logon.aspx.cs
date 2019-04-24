@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 //using System.Web.UI.Security;
 using System.Data.Entity;
 using System.Data.SqlClient;
+using System.Web.Security;
 
 namespace sportsBiddingApp2._0
 {
@@ -32,7 +33,10 @@ namespace sportsBiddingApp2._0
                                          select x).FirstOrDefault();
 
             //int role = myPerson.Admin_Account;
-            
+            Session.Add("iD", myPerson.Id);
+            Session.Add("name", myPerson.FirstName);
+            Session.Add("balance", myPerson.Balance);
+            FormsAuthentication.RedirectFromLoginPage(Login1.UserName, true);
             Response.Redirect("~/Default.aspx");
         }
     }

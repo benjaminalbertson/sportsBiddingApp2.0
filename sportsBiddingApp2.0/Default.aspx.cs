@@ -7,6 +7,7 @@ using System.Web.UI.WebControls;
 using System.Web.ModelBinding;
 using System.Data.Entity;
 
+
 namespace sportsBiddingApp2._0
 {
     public partial class _Default : Page
@@ -19,7 +20,7 @@ namespace sportsBiddingApp2._0
                                          where x.username.Trim().Equals(User.Identity.Name)
                                          select x).FirstOrDefault();
 
-            Label1.Text = myPerson.FirstName.ToString();
+            Label1.Text = Session["name"].ToString();
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
