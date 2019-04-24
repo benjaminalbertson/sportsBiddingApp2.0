@@ -11,7 +11,7 @@ namespace sportsBiddingApp2._0
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            
         }
     }
 }

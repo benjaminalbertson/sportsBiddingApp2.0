@@ -32,7 +32,7 @@ namespace sportsBiddingApp2._0
                                          select x).FirstOrDefault();
 
             //int role = myPerson.Admin_Account;
-
+            
             Response.Redirect("~/Default.aspx");
         }
     }
