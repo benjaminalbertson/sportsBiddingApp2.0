@@ -20,7 +20,7 @@ namespace sportsBiddingApp2._0
                                          where x.username.Trim().Equals(User.Identity.Name)
                                          select x).FirstOrDefault();
 
-            Label1.Text = Session["name"].ToString();
+            //Label1.Text = Session["name"].ToString();
         }
 
         protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)

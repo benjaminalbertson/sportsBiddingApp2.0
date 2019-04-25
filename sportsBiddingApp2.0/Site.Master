@@ -19,6 +19,9 @@
         .auto-style1 {
             color: #FF3300;
         }
+        .auto-style2 {
+            color: #FFFFFF;
+        }
     </style>
 
 </head>
@@ -52,7 +55,8 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <span class="auto-style1">Sports Betting App</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="auto-style1">Sports Betting App</span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span class="auto-style2">Welcome: &nbsp;<asp:Label ID="Label1" runat="server"></asp:Label>
+                    </span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
                 </div>
                 <div class="navbar-collapse collapse">
                     <ul class="nav navbar-nav">

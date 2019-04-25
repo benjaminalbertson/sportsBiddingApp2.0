@@ -3,10 +3,9 @@
     <table style="width: 99%; height: 26px;">
         <tr>
             <td style="height: 20px">Admin</td>
-            <td class="text-right" style="height: 20px; width: 1727px">Welcome: </td>
+            <td class="text-right" style="height: 20px; width: 1727px">&nbsp;</td>
             <td style="height: 20px">
-                <asp:Label ID="Label1" runat="server"></asp:Label>
-            </td>
+                &nbsp;</td>
         </tr>
     </table>
 </asp:Content>

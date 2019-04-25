@@ -11,7 +11,8 @@ namespace sportsBiddingApp2._0
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            
+            if (Session["name"] != null)
+                Label1.Text = Session["name"].ToString();
         }
     }
 }
