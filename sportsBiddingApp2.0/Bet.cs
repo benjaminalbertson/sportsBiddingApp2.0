@@ -12,14 +12,13 @@ namespace sportsBiddingApp2._0
     using System;
     using System.Collections.Generic;
     
-    public partial class Sports_Table
+    public partial class Bet
     {
-        public string Home { get; set; }
-        public string Away { get; set; }
-        public decimal H__win { get; set; }
-        public decimal A__win { get; set; }
-        public Nullable<byte> Home_Winner { get; set; }
-        public Nullable<byte> Away_Winner { get; set; }
-        public int Match_ID { get; set; }
+        public int Id { get; set; }
+        public int MatchId { get; set; }
+        public string HomeAway { get; set; }
+        public decimal BetAmount { get; set; }
+        public Nullable<decimal> Winnings { get; set; }
+        public int UserId { get; set; }
     }
 }

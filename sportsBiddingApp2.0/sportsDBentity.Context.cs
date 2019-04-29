@@ -27,5 +27,6 @@ namespace sportsBiddingApp2._0
     
         public virtual DbSet<Sports_Table> Sports_Tables { get; set; }
         public virtual DbSet<User_Admin_Table> User_Admin_Tables { get; set; }
+        public virtual DbSet<Bet> Bets { get; set; }
     }
 }

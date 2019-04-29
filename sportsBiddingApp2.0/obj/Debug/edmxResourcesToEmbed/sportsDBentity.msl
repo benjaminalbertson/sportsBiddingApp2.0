@@ -4,16 +4,12 @@
     <EntitySetMapping Name="Sports_Tables">
       <EntityTypeMapping TypeName="sportsDBModel.Sports_Table">
         <MappingFragment StoreEntitySet="Sports Table">
-          <ScalarProperty Name="Bid_ID" ColumnName="Bid ID" />
           <ScalarProperty Name="Home" ColumnName="Home" />
           <ScalarProperty Name="Away" ColumnName="Away" />
-          <ScalarProperty Name="Bid_Home" ColumnName="Bid Home" />
-          <ScalarProperty Name="Bid_Away" ColumnName="Bid Away" />
           <ScalarProperty Name="H__win" ColumnName="H% win" />
           <ScalarProperty Name="A__win" ColumnName="A% win" />
           <ScalarProperty Name="Home_Winner" ColumnName="Home Winner" />
           <ScalarProperty Name="Away_Winner" ColumnName="Away Winner" />
-          <ScalarProperty Name="User_ID" ColumnName="User ID" />
           <ScalarProperty Name="Match_ID" ColumnName="Match ID" />
         </MappingFragment>
       </EntityTypeMapping>
@@ -28,6 +24,18 @@
           <ScalarProperty Name="password" ColumnName="password" />
           <ScalarProperty Name="Balance" ColumnName="Balance" />
           <ScalarProperty Name="Admin_Account" ColumnName="Admin Account" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Bets">
+      <EntityTypeMapping TypeName="sportsDBModel.Bet">
+        <MappingFragment StoreEntitySet="Bet">
+          <ScalarProperty Name="UserId" ColumnName="UserId" />
+          <ScalarProperty Name="Winnings" ColumnName="Winnings" />
+          <ScalarProperty Name="BetAmount" ColumnName="BetAmount" />
+          <ScalarProperty Name="HomeAway" ColumnName="HomeAway" />
+          <ScalarProperty Name="MatchId" ColumnName="MatchId" />
+          <ScalarProperty Name="Id" ColumnName="Id" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>

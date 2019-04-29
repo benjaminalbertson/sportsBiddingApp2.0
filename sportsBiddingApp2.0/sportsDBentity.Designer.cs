@@ -1,4 +1,4 @@
-﻿// T4 code generation is enabled for model 'C:\Users\toroc\Desktop\Begos studd\DataBases\sportsBiddingApp2.0\sportsBiddingApp2.0\sportsDBentity.edmx'. 
+﻿// T4 code generation is enabled for model 'C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingApp2.0\sportsDBentity.edmx'. 
 // To enable legacy code generation, change the value of the 'Code Generation Strategy' designer
 // property to 'Legacy ObjectContext'. This property is available in the Properties Window when the model
 // is open in the designer.

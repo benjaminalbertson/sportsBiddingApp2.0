@@ -22,6 +22,19 @@ namespace sportsBiddingApp2._0
             int matchId = Convert.ToInt32(TextBox1.Text);
             string team = DropDownList1.SelectedItem.Text;
             decimal amount = Convert.ToDecimal(TextBox2.Text);
+            int userId = Convert.ToInt32(HttpContext.Current.Session["iD"]);
+
+            Bet newBet = new Bet
+            {
+                MatchId = matchId,
+                HomeAway = team,
+                BetAmount = amount,
+                UserId = userId
+            };
+
+            dbcon.Bets.Add(newBet);
+            dbcon.SaveChanges();
+            GridView1.DataBind();
 
         }
     }

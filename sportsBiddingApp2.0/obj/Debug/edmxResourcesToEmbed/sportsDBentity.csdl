@@ -2,19 +2,15 @@
 <Schema Namespace="sportsDBModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
   <EntityType Name="Sports_Table">
     <Key>
-      <PropertyRef Name="Bid_ID" />
+      <PropertyRef Name="Match_ID" />
     </Key>
-    <Property Name="Bid_ID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="Home" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
     <Property Name="Away" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-    <Property Name="Bid_Home" Type="Decimal" Precision="6" Scale="2" />
-    <Property Name="Bid_Away" Type="Decimal" Precision="6" Scale="2" />
     <Property Name="H__win" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
     <Property Name="A__win" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
     <Property Name="Home_Winner" Type="Byte" />
     <Property Name="Away_Winner" Type="Byte" />
-    <Property Name="User_ID" Type="Int32" />
-    <Property Name="Match_ID" Type="Int32" />
+    <Property Name="Match_ID" Type="Int32" Nullable="false" />
   </EntityType>
   <EntityType Name="User_Admin_Table">
     <Key>
@@ -31,5 +27,17 @@
   <EntityContainer Name="sportsDBEntities" annotation:LazyLoadingEnabled="true">
     <EntitySet Name="Sports_Tables" EntityType="Self.Sports_Table" />
     <EntitySet Name="User_Admin_Tables" EntityType="Self.User_Admin_Table" />
+    <EntitySet Name="Bets" EntityType="sportsDBModel.Bet" />
   </EntityContainer>
+  <EntityType Name="Bet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="MatchId" Type="Int32" Nullable="false" />
+    <Property Name="HomeAway" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="false" />
+    <Property Name="BetAmount" Type="Decimal" Nullable="false" Precision="18" Scale="2" />
+    <Property Name="Winnings" Type="Decimal" Precision="18" Scale="2" />
+    <Property Name="UserId" Type="Int32" Nullable="false" />
+  </EntityType>
 </Schema>
