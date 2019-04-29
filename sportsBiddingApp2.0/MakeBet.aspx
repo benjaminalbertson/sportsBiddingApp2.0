@@ -32,6 +32,6 @@
     <asp:TextBox ID="TextBox2" runat="server" Width="50px"></asp:TextBox>
 </p>
 <p style="font-size: medium">
-    <asp:Button ID="Button1" runat="server" Text="Make Bet" />
+    <asp:Button ID="Button1" runat="server" Text="Make Bet" OnClick="Button1_Click" />
 </p>
 </asp:Content>
