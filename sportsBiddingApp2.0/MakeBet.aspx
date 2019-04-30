@@ -3,7 +3,9 @@
     <p style="font-size: xx-large">
     Available Games</p>
 <p style="font-size: xx-large">
-    &nbsp;</p>
+    <asp:Label ID="Label3" runat="server" Font-Size="Medium" Text="Your Balance:"></asp:Label>
+&nbsp;<asp:Label ID="Label4" runat="server" Font-Size="Medium"></asp:Label>
+    </p>
 <p style="font-size: xx-large">
     <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Match_ID" DataSourceID="SqlDataSource1" style="font-size: medium">
         <Columns>
@@ -33,5 +35,8 @@
 </p>
 <p style="font-size: medium">
     <asp:Button ID="Button1" runat="server" Text="Make Bet" OnClick="Button1_Click" />
+</p>
+    <p style="font-size: medium">
+        <asp:Label ID="Label2" runat="server" ForeColor="Red"></asp:Label>
 </p>
 </asp:Content>

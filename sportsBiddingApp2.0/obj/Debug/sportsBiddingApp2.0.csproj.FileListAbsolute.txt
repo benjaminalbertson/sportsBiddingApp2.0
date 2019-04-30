@@ -234,3 +234,4 @@ C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingA
 C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingApp2.0\obj\Debug\sportsBiddingApp2.0.csproj.CopyComplete
 C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingApp2.0\obj\Debug\sportsBiddingApp2.0.dll
 C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingApp2.0\obj\Debug\sportsBiddingApp2.0.pdb
+C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingApp2.0\obj\Debug\sportsBiddingApp2.0.csprojAssemblyReference.cache
