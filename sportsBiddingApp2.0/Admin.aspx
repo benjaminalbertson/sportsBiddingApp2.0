@@ -8,6 +8,7 @@
                 <br />
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Match ID" DataSourceID="SqlDataSource1">
                     <Columns>
+                        <asp:CommandField ShowSelectButton="True" />
                         <asp:BoundField DataField="Home" HeaderText="Home" SortExpression="Home" />
                         <asp:BoundField DataField="Away" HeaderText="Away" SortExpression="Away" />
                         <asp:BoundField DataField="H% win" HeaderText="H% win" SortExpression="H% win" />
@@ -19,6 +20,15 @@
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource1" runat="server" ConnectionString="<%$ ConnectionStrings:sportsDBConnectionString1 %>" SelectCommand="SELECT * FROM [Sports Table]"></asp:SqlDataSource>
                 <br />
+                PIck Winner:<br />
+                <asp:DropDownList ID="DropDownList1" runat="server">
+                    <asp:ListItem>Home</asp:ListItem>
+                    <asp:ListItem>Away</asp:ListItem>
+                </asp:DropDownList>
+                <br />
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Set Winner" />
+                <br />
+                <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
                 <br />
                 <asp:Label ID="Label3" runat="server" Text="Bets"></asp:Label>
                 <br />
