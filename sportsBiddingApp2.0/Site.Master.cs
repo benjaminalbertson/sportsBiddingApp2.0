@@ -14,5 +14,10 @@ namespace sportsBiddingApp2._0
             if (Session["name"] != null)
                 Label1.Text = Session["name"].ToString();
         }
+
+        protected void LoginStatus1_LoggingOut(object sender, LoginCancelEventArgs e)
+        {
+
+        }
     }
 }
