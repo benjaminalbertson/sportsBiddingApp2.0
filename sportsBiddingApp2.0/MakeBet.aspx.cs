@@ -32,6 +32,12 @@ namespace sportsBiddingApp2._0
                 UserId = userId
             };
 
+            User_Admin_Table bettingPerson = (from x in dbcon.User_Admin_Tables
+                                              where x.Id == userId
+                                              select x).First();
+
+            bettingPerson.Balance -= amount;
+
             dbcon.Bets.Add(newBet);
             dbcon.SaveChanges();
             GridView1.DataBind();

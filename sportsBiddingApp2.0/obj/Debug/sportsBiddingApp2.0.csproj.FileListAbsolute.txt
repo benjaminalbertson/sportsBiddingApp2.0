@@ -230,7 +230,6 @@ C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingA
 C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingApp2.0\bin\System.Diagnostics.DiagnosticSource.xml
 C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingApp2.0\bin\Microsoft.AspNet.TelemetryCorrelation.xml
 C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingApp2.0\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingApp2.0\obj\Debug\sportsBiddingApp2.0.csprojAssemblyReference.cache
 C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingApp2.0\obj\Debug\sportsBiddingApp2.0.csproj.CoreCompileInputs.cache
 C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingApp2.0\obj\Debug\sportsBiddingApp2.0.csproj.CopyComplete
 C:\Users\benal\Source\Repos\benjaminalbertson\sportsBiddingApp2.0\sportsBiddingApp2.0\obj\Debug\sportsBiddingApp2.0.dll

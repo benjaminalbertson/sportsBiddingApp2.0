@@ -28,7 +28,6 @@
                 <br />
                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Set Winner" />
                 <br />
-                <asp:Label ID="Label4" runat="server" Text="Label"></asp:Label>
                 <br />
                 <asp:Label ID="Label3" runat="server" Text="Bets"></asp:Label>
                 <br />
@@ -44,6 +43,21 @@
                     </Columns>
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:sportsDBConnectionString1 %>" SelectCommand="SELECT * FROM [Bet]"></asp:SqlDataSource>
+                <br />
+                Users<br />
+                <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource3">
+                    <Columns>
+                        <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
+                        <asp:BoundField DataField="FirstName" HeaderText="FirstName" SortExpression="FirstName" />
+                        <asp:BoundField DataField="LastName" HeaderText="LastName" SortExpression="LastName" />
+                        <asp:BoundField DataField="username" HeaderText="username" SortExpression="username" />
+                        <asp:BoundField DataField="password" HeaderText="password" SortExpression="password" />
+                        <asp:BoundField DataField="Balance" HeaderText="Balance" SortExpression="Balance" />
+                        <asp:BoundField DataField="Admin Account" HeaderText="Admin Account" SortExpression="Admin Account" />
+                    </Columns>
+                </asp:GridView>
+                <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:sportsDBConnectionString1 %>" SelectCommand="SELECT * FROM [User Admin Table]"></asp:SqlDataSource>
+                <br />
                 <br />
                 <br />
                 <br />
