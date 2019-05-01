@@ -20,13 +20,13 @@
           <Key>
             <PropertyRef Name="Match ID" />
           </Key>
+          <Property Name="Match ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="Home" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="Away" Type="nvarchar" MaxLength="50" Nullable="false" />
-          <Property Name="H% win" Type="decimal" Precision="6" Scale="2" Nullable="false" />
-          <Property Name="A% win" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="H% win" Type="decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="A% win" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Home Winner" Type="tinyint" />
           <Property Name="Away Winner" Type="tinyint" />
-          <Property Name="Match ID" Type="int" StoreGeneratedPattern="None" Nullable="false" />
         </EntityType>
         <EntityType Name="User Admin Table">
           <Key>
@@ -37,7 +37,7 @@
           <Property Name="LastName" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="username" Type="varchar" MaxLength="50" Nullable="false" />
           <Property Name="password" Type="varchar" MaxLength="50" Nullable="false" />
-          <Property Name="Balance" Type="decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Balance" Type="decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Admin Account" Type="tinyint" Nullable="false" />
         </EntityType>
         <EntityContainer Name="sportsDBModelStoreContainer">
@@ -55,8 +55,8 @@
           </Key>
           <Property Name="Home" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="Away" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
-          <Property Name="H__win" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
-          <Property Name="A__win" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="H__win" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
+          <Property Name="A__win" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Home_Winner" Type="Byte" />
           <Property Name="Away_Winner" Type="Byte" />
           <Property Name="Match_ID" Type="Int32" Nullable="false" />
@@ -70,7 +70,7 @@
           <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="username" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
           <Property Name="password" Type="String" MaxLength="50" FixedLength="false" Unicode="false" Nullable="false" />
-          <Property Name="Balance" Type="Decimal" Precision="6" Scale="2" Nullable="false" />
+          <Property Name="Balance" Type="Decimal" Precision="18" Scale="2" Nullable="false" />
           <Property Name="Admin_Account" Type="Byte" Nullable="false" />
         </EntityType>
         <EntityContainer Name="sportsDBEntities" annotation:LazyLoadingEnabled="true">

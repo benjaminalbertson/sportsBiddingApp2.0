@@ -4,8 +4,7 @@
 
     <table style="width: 100%; height: 36px;">
         <tr>
-            <td style="width: 222px; height: 12px">Your Bets<br />
-                <br />
+            <td style="width: 222px; height: 12px">Your Bets:<br />
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id,Match ID" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" Width="771px">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
@@ -35,6 +34,8 @@
                         <asp:SessionParameter DefaultValue="" Name="UserId" SessionField="iD" Type="Int32" />
                     </SelectParameters>
                 </asp:SqlDataSource>
+                <br />
+                <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Log Out" />
             </td>
             <td class="text-right" style="width: 307px; height: 12px">&nbsp;</td>
             <td style="height: 12px">

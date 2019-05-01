@@ -5,7 +5,7 @@
             <td style="height: 20px; width: 1229px;">Admin<br />
                 <br />
                 <asp:Label ID="Label2" runat="server" Text="Games"></asp:Label>
-                <br />
+                :<br />
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Match ID" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" Width="643px">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
@@ -40,9 +40,30 @@
                 <asp:Button ID="Button1" runat="server" OnClick="Button1_Click" Text="Set Winner" />
                 <br />
                 <br />
+                --------------------------------<br />
+                <br />
+                Add A Game:<br />
+                <asp:Label ID="Label4" runat="server" Text="Home Team:"></asp:Label>
+&nbsp;
+                <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
+&nbsp;
+                <asp:Label ID="Label5" runat="server" Text="Away Team:"></asp:Label>
+&nbsp;
+                <asp:TextBox ID="TextBox2" runat="server"></asp:TextBox>
+                <br />
+                <asp:Label ID="Label6" runat="server" Text="Home Odds:"></asp:Label>
+&nbsp;
+                <asp:TextBox ID="TextBox3" runat="server"></asp:TextBox>
+&nbsp;
+                <asp:Label ID="Label7" runat="server" Text="Away Odds:"></asp:Label>
+&nbsp;
+                <asp:TextBox ID="TextBox4" runat="server"></asp:TextBox>
+                <br />
+                <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Add Game" />
+                <br />
+                <br />
                 <asp:Label ID="Label3" runat="server" Text="Bets"></asp:Label>
-                <br />
-                <br />
+                :<br />
                 <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource2" CellPadding="4" ForeColor="#333333" GridLines="None" Width="440px">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
@@ -66,7 +87,7 @@
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource2" runat="server" ConnectionString="<%$ ConnectionStrings:sportsDBConnectionString1 %>" SelectCommand="SELECT * FROM [Bet]"></asp:SqlDataSource>
                 <br />
-                Users<br />
+                Users:<br />
                 <asp:GridView ID="GridView3" runat="server" AutoGenerateColumns="False" DataKeyNames="Id" DataSourceID="SqlDataSource3" CellPadding="4" ForeColor="#333333" GridLines="None" Width="607px">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
@@ -91,6 +112,7 @@
                 </asp:GridView>
                 <asp:SqlDataSource ID="SqlDataSource3" runat="server" ConnectionString="<%$ ConnectionStrings:sportsDBConnectionString1 %>" SelectCommand="SELECT * FROM [User Admin Table]"></asp:SqlDataSource>
                 <br />
+                <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Log Out" />
                 <br />
                 <br />
                 <br />

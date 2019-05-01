@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.ModelBinding;
 using System.Data.Entity;
+using System.Web.Security;
 
 
 namespace sportsBiddingApp2._0
@@ -23,9 +24,11 @@ namespace sportsBiddingApp2._0
             //Label1.Text = Session["name"].ToString();
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void Button1_Click(object sender, EventArgs e)
         {
-
+            FormsAuthentication.SignOut();
+            FormsAuthentication.RedirectToLoginPage();
+            Session.Clear();
         }
     }
 }

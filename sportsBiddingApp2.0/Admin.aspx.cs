@@ -6,6 +6,7 @@ using System.Web.UI;
 using System.Web.UI.WebControls;
 using System.Web.ModelBinding;
 using System.Data.Entity;
+using System.Web.Security;
 
 namespace sportsBiddingApp2._0
 {
@@ -99,8 +100,43 @@ namespace sportsBiddingApp2._0
                 GridView2.DataBind();
                 GridView3.DataBind();
             }
+            else
+            {
 
+            }
        
+        }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            //logging out
+            FormsAuthentication.SignOut();
+            FormsAuthentication.RedirectToLoginPage();
+            Session.Clear();
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            //adding a game
+            string homeTeam = TextBox1.Text;
+            string awayTeam = TextBox2.Text;
+            decimal homeOdds = Convert.ToDecimal(TextBox3.Text);
+            decimal awayOdds = Convert.ToDecimal(TextBox4.Text);
+
+            Sports_Table newGame = new Sports_Table
+            {
+                Home = homeTeam,
+                Away = awayTeam,
+                H__win = homeOdds,
+                A__win = awayOdds,          
+            };
+            
+
+            dbcon.Sports_Tables.Add(newGame);
+            dbcon.SaveChanges();
+            GridView1.DataBind();
+            GridView2.DataBind();
+            GridView3.DataBind();
         }
     }
 }
