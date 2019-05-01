@@ -12,8 +12,8 @@
         <Columns>
             <asp:BoundField DataField="Home" HeaderText="Home" SortExpression="Home" />
             <asp:BoundField DataField="Away" HeaderText="Away" SortExpression="Away" />
-            <asp:BoundField DataField="column1" HeaderText="column1" SortExpression="column1" />
-            <asp:BoundField DataField="column2" HeaderText="column2" SortExpression="column2" />
+            <asp:BoundField DataField="column1" HeaderText="Home % Win" SortExpression="column1" />
+            <asp:BoundField DataField="column2" HeaderText="Away % Win" SortExpression="column2" />
             <asp:BoundField DataField="Match_ID" HeaderText="Match_ID" InsertVisible="False" ReadOnly="True" SortExpression="Match_ID" />
         </Columns>
         <EditRowStyle BackColor="#999999" />

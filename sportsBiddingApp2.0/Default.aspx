@@ -8,7 +8,6 @@
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" DataKeyNames="Id,Match ID" DataSourceID="SqlDataSource1" CellPadding="4" ForeColor="#333333" GridLines="None" Width="771px">
                     <AlternatingRowStyle BackColor="White" ForeColor="#284775" />
                     <Columns>
-                        <asp:BoundField DataField="Id" HeaderText="Id" InsertVisible="False" ReadOnly="True" SortExpression="Id" />
                         <asp:BoundField DataField="MatchId" HeaderText="MatchId" SortExpression="MatchId" />
                         <asp:BoundField DataField="HomeAway" HeaderText="HomeAway" SortExpression="HomeAway" />
                         <asp:BoundField DataField="BetAmount" HeaderText="BetAmount" SortExpression="BetAmount" />
@@ -16,7 +15,6 @@
                         <asp:BoundField DataField="UserId" HeaderText="UserId" SortExpression="UserId" />
                         <asp:BoundField DataField="Home" HeaderText="Home" SortExpression="Home" />
                         <asp:BoundField DataField="Away" HeaderText="Away" SortExpression="Away" />
-                        <asp:BoundField DataField="Match ID" HeaderText="Match ID" InsertVisible="False" ReadOnly="True" SortExpression="Match ID" />
                     </Columns>
                     <EditRowStyle BackColor="#999999" />
                     <FooterStyle BackColor="#5D7B9D" Font-Bold="True" ForeColor="White" />
